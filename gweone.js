@@ -1,4 +1,4 @@
-function(gweone)
+(function(gweone)
 {
 	gweone.getParameterByName = function(name, url) {
 		if (!url) url = window.location.href;
@@ -30,4 +30,4 @@ function(gweone)
 	document.getElementById(gweone.id).appendChild(gweone.getElement());	
 	$(".streamed-el").attr('data-href', 'https://www.facebook.com/gweonegames/videos/' + gweone.streamed[gweone.getRandom(0, gweone.streamed.length - 1)]);
 	
-}({});
+})({});
