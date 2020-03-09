@@ -19,6 +19,8 @@
 		el.setAttribute('data-width', 'auto');
 		el.setAttribute('data-autoplay', 'true');
 		el.setAttribute('data-show-text', 'true');
+		return el;
+		
 	};
 	
 	gweone.getRandom = function(min, max) {
