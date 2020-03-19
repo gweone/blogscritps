@@ -35,6 +35,19 @@
 		
 	};
 	
+	gweone.getFeeds = function(bloggerUrl, callback){
+		var url= 'http://www.gweone.com/feeds/posts/default?alt=rss&start-index=' + gweone.getRandom(1, 190);
+		$.ajax({
+		  type: 'GET',
+		  url: "https://api.rss2json.com/v1/api.json?api_key=yeio73cvsaa0rezatvcrxllwui2d9zoxu2xwuhpl&count=500&rss_url=" + url,
+		  dataType: 'jsonp',
+		  success: function(data) {  
+			if(callback)
+				callback(data);
+		  }
+		});
+	};
+	
 	gweone.getRandom = function(min, max) {
 		min = Math.ceil(Math.random() * (max - min) + min);
 		max = Math.floor(max);
