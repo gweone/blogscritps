@@ -1,3 +1,4 @@
+var gweone = gweone || {};
 (function(gweone)
 {
 	gweone.getParameterByName = function(name, url) {
@@ -57,4 +58,4 @@
 	document.getElementById(gweone.id).appendChild(gweone.getElement());	
 	$(".streamed-el").attr('data-href', 'https://www.facebook.com/gweonegames/videos/' + gweone.streamed[gweone.getRandom(0, gweone.getRandom(1, gweone.streamed.length - 1))]);
 	
-})({});
+})(gweone);
