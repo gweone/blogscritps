@@ -37,7 +37,7 @@ var gweone = gweone || {};
 	};
 	
 	gweone.getFeeds = function(bloggerUrl, callback){
-		var url= 'http://www.gweone.com/feeds/posts/default?alt=rss&start-index=' + gweone.getRandom(1, 190);
+		var url= bloggerUrl + '&start-index=' + gweone.getRandom(1, 190);
 		$.ajax({
 		  type: 'GET',
 		  url: "https://api.rss2json.com/v1/api.json?api_key=yeio73cvsaa0rezatvcrxllwui2d9zoxu2xwuhpl&count=500&rss_url=" + url,
@@ -55,7 +55,9 @@ var gweone = gweone || {};
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	};
 	
-	document.getElementById(gweone.id).appendChild(gweone.getElement());	
-	$(".streamed-el").attr('data-href', 'https://www.facebook.com/gweonegames/videos/' + gweone.streamed[gweone.getRandom(0, gweone.getRandom(1, gweone.streamed.length - 1))]);
-	
+	var el = document.getElementById(gweone.id);
+	if(el){
+		document.getElementById(gweone.id).appendChild(gweone.getElement());	
+		$(".streamed-el").attr('data-href', 'https://www.facebook.com/gweonegames/videos/' + gweone.streamed[gweone.getRandom(0, gweone.getRandom(1, gweone.streamed.length - 1))]);
+	}
 })(gweone);
