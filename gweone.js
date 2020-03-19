@@ -1,4 +1,5 @@
 var gweone = gweone || {};
+
 (function(gweone)
 {
 	gweone.getParameterByName = function(name, url) {
