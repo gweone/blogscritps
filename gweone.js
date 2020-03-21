@@ -38,7 +38,7 @@ var gweone = gweone || {};
 	};
 	
 	gweone.getFeeds = function(bloggerUrl, callback){
-		var url= bloggerUrl + '&start-index=' + gweone.getRandom(1, 190);
+		var url= bloggerUrl + '&start-index=' + gweone.getRandom(gweone.getRandom(1, 50), 190);
 		$.ajax({
 		  type: 'GET',
 		  url: "https://api.rss2json.com/v1/api.json?api_key=yeio73cvsaa0rezatvcrxllwui2d9zoxu2xwuhpl&count=500&rss_url=" + url,
